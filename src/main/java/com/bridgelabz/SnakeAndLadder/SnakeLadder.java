@@ -3,7 +3,7 @@ package com.bridgelabz.SnakeAndLadder;
 public class SnakeLadder {
 
 	private static int rollCheck() {
-		int rollValue = (int) (Math.floor(Math.random() * 10 % 7));
+		int rollValue = (int) (Math.floor(Math.random() * 10 % 6 + 1));
 		return rollValue;
 
 	}
@@ -17,8 +17,9 @@ public class SnakeLadder {
 		int position1 = 0;
 		System.out.println("Welcome to Snake and Ladder Game");
 		System.out.println("Position of Player1 is:" + position1);
-		int rollDie = rollCheck();
-		if (rollDie > 0) {
+		int winningPosition = 100;
+		while (position1 != winningPosition) {
+			int rollDie = rollCheck();
 			System.out.println("Value at die is: " + rollDie);
 			int checkOption = options();
 			switch (checkOption) {
@@ -37,9 +38,6 @@ public class SnakeLadder {
 				break;
 			}
 			System.out.println("Current Position of player1 is: " + position1);
-
-		} else
-			System.out.println("Roll the die again!");
-
+		}
 	}
 }
