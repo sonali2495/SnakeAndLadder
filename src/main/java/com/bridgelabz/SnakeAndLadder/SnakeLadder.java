@@ -29,6 +29,8 @@ public class SnakeLadder {
 			case 1:
 				System.out.println("Ladder");
 				position1 = position1 + rollDie;
+				if (position1 > winningPosition)
+					position1 = position1 - rollDie;
 				break;
 			case 2:
 				System.out.println("Snake");
