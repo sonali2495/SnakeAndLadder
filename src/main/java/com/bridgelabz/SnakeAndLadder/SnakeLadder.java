@@ -14,7 +14,7 @@ public class SnakeLadder {
 	}
 
 	public static void main(String[] args) {
-		int position1 = 0;
+		int position1 = 0, counter=0;
 		System.out.println("Welcome to Snake and Ladder Game");
 		System.out.println("Position of Player1 is:" + position1);
 		int winningPosition = 100;
@@ -40,6 +40,8 @@ public class SnakeLadder {
 				break;
 			}
 			System.out.println("Current Position of player1 is: " + position1);
+			counter++;
 		}
+		System.out.println("Numbere of times the dice was played are: " +counter);
 	}
 }
